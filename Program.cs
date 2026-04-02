@@ -1,3 +1,4 @@
 ﻿using DataStructures;
 
-StackDemo.RunStackDemo();
+// StackDemo.RunStackDemo();
+QueueDemo.RunQueueDemo();

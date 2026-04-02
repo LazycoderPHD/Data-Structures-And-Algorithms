@@ -18,7 +18,7 @@ public class QueueDemo
         queue.Enqueue("Steve");
         queue.Enqueue("Drake");
 
-        System.Console.WriteLine(queue);
+        System.Console.WriteLine(string.Join(", ", queue));
 
 
         
