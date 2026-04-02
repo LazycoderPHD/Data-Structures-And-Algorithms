@@ -11,6 +11,16 @@ public class QueueDemo
 		//        Add = Enqueue()
 		//        rm = Dequeue()
 
+        Queue<string> queue = new Queue<string>();
+
+        queue.Enqueue("Karen");
+        queue.Enqueue("Chad");
+        queue.Enqueue("Steve");
+        queue.Enqueue("Drake");
+
+        System.Console.WriteLine(queue);
+
+
         
     }
 }
