@@ -1,1 +1,3 @@
-﻿
+﻿using DataStructures;
+
+StackDemo.RunStackDemo();
