@@ -1,4 +1,5 @@
 ﻿using DataStructures;
 
 // StackDemo.RunStackDemo();
-QueueDemo.RunQueueDemo();
+//QueueDemo.RunQueueDemo();
+Priority_QueueDemo.RunPriority_QueueDemo();
