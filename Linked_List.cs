@@ -17,16 +17,31 @@ public class Linked_ListDemo
         //    2. No random access of elements (no index [i])
         //    3. Accessing/searching elements is more time consuming. O(n)
 
-        LinkedList<string> LK =new LinkedList<string>();
+        LinkedList<string> LK_Stack =new LinkedList<string>();
 
-        LK.AddFirst("A");
-        LK.AddFirst("B");
-        LK.AddFirst("C");
-        LK.AddFirst("D");
-        LK.AddFirst("F");
+        //LinkedList as a Stack
+        LK_Stack.AddFirst("A"); //AddFirst for stack
+        LK_Stack.AddFirst("B");
+        LK_Stack.AddFirst("C");
+        LK_Stack.AddFirst("D");
+        LK_Stack.AddFirst("E");
+        LK_Stack.AddFirst("F");
 
-        LK.RemoveFirst();
+        LK_Stack.RemoveFirst(); //remove F
+        Console.WriteLine($"[{string.Join(", ", LK_Stack)}]");
 
-        Console.WriteLine($"[{string.Join(", ", LK)}]");
+        Console.WriteLine();
+
+        LinkedList<string> LK_Queue = new LinkedList<string>();
+        //LinkedList as a Queue
+        LK_Queue.AddLast("A"); //AddLast for queue
+        LK_Queue.AddLast("B");
+        LK_Queue.AddLast("C");
+        LK_Queue.AddLast("D");
+        LK_Queue.AddLast("E");
+        LK_Queue.AddLast("F");
+
+        LK_Queue.RemoveFirst();
+        Console.WriteLine($"[{string.Join(", ", LK_Queue)}]");
     }
 }
