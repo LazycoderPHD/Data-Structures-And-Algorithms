@@ -46,7 +46,7 @@ public class Linked_ListDemo
         
         var nodeD = LK_Queue.Find("D"); // Tìm node chứa "D"
 
-        // Chèn "?" sau node đó
+        //Chèn "?" sau node đó
         if (nodeD != null)
         {
             LK_Queue.AddAfter(nodeD, "?");
