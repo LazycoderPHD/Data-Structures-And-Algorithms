@@ -1,4 +1,6 @@
-﻿namespace DataStructures;
+﻿using System.Collections.Generic;
+
+namespace DataStructures;
 public class Linked_ListDemo
 {
     public static void RunLinked_ListDemo()
@@ -41,7 +43,45 @@ public class Linked_ListDemo
         LK_Queue.AddLast("E");
         LK_Queue.AddLast("F");
 
-        LK_Queue.RemoveFirst();
+        
+        var nodeD = LK_Queue.Find("D"); // Tìm node chứa "D"
+
+        // Chèn "?" sau node đó
+        if (nodeD != null)
+        {
+            LK_Queue.AddAfter(nodeD, "?");
+        }
+
+        //tìm index của "F" A0 B1 C2 D3 E4 ?5 F6 <-- => index là 6
+        LK_Queue.ToList().FindIndex(x => x == "F");
+        Console.WriteLine(LK_Queue.ToList().FindIndex(x => x == "F"));
+
+        //LK_Queue.RemoveFirst(); //remove A"
+
+        if (LK_Queue.First != null && LK_Queue.Last != null) //kiểm tra xem danh sách mình có trống không?
+        {
+            Console.WriteLine(LK_Queue.First.Value); //xem đầu
+            Console.WriteLine(LK_Queue.Last.Value); //xem đuôi
+        }
+
+        LK_Queue.AddFirst("0"); //Add 0 trước A
+        LK_Queue.AddLast("G"); //Add G sau F
         Console.WriteLine($"[{string.Join(", ", LK_Queue)}]");
+
+        //Kiểm tra xem danh sách mình có trống không?
+        if (LK_Queue.First != null)
+        {
+            //Gán biến và xóa phần tử đầu
+            string First = LK_Queue.First.Value; //Lấy giá trị
+            LK_Queue.RemoveFirst(); //Xóa khỏi danh sách
+        }
+
+        //Kiểm tra xem danh sách mình có trống không?
+        if (LK_Queue.Last != null)
+        {
+            //Gán biến và xóa phần tử cuối
+            string Last = LK_Queue.Last.Value; //Lấy giá trị
+            LK_Queue.RemoveLast(); //Xoá khỏi danh sách
+        }
     }
 }
