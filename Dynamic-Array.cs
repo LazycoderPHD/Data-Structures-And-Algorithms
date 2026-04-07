@@ -77,12 +77,28 @@ public class Dynamic_Array
 
     private void grow()
     {
+        int newCapacity = (int)(capacity * 2);
+        object[] newA = new object[newCapacity];
 
+        for (int i = 0; i < size; i++)
+        {
+            newA[i] = a[i];
+        }
+        capacity = newCapacity;
+        a = newA;
     }
 
     private void shrink()
     {
+        int newCapacity = (int)(capacity / 2);
+        object[] newA = new object[newCapacity];
 
+        for (int i = 0; i < size; i++)
+        {
+            newA[i] = a[i];
+        }
+        capacity = newCapacity;
+        a = newA;
     }
 
     public bool IsEmpty()
