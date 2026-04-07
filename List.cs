@@ -18,11 +18,13 @@ public class Dynamic_ArrayDemo
         //Dynamic_Array DA = new Dynamic_Array(5);
 
         // In ra capacity giống trong video
-        Console.WriteLine($"Capacity: {DA.capacity}");
         DA.add("A");
         DA.add("B");
         DA.add("C");
 
         Console.WriteLine(DA);
+        Console.WriteLine($"Size: {DA.size}");
+        Console.WriteLine($"Capacity: {DA.capacity}");
+        Console.WriteLine($"Empty: {DA.IsEmpty()}");
     }
 }

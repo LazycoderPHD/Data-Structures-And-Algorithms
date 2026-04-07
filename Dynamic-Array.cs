@@ -4,7 +4,7 @@ public class Dynamic_Array
 {
     // Đây là các Field của Class, được phép dùng public
     public int size;
-    public int capacity = 10;
+    public int capacity = 4;
     public object[] a;
 
     public Dynamic_Array()
@@ -58,6 +58,11 @@ public class Dynamic_Array
         return size == 0;
     }
 
+    //public bool IsEmpty => size == 0; //property
+
+
+
+
     ////sẽ in ra A, B, C,  nhìn rất thiếu chuyên nghiệp
 
     //public override string ToString()
@@ -71,6 +76,8 @@ public class Dynamic_Array
     //}
 
     //cái này fix cái trên
+
+
     public override string ToString()
     {
         string str = "";
@@ -94,5 +101,23 @@ public class Dynamic_Array
 
 
 
+    //cái này cho capacity, xem toàn bộ để thấy là nó có null hay không
+
+    //public override string ToString()
+    //{
+    //    string str = "";
+    //    for (int i = 0; i < capacity; i++)
+    //    {
+    //        // Kiểm tra nếu ô đó rỗng thì cộng chữ "null", nếu có thì cộng giá trị
+    //        str += (a[i] == null ? "null" : a[i].ToString()) + ", ";
+    //    }
+
+    //    if (str != "")
+    //    {
+    //        // Chỉ bọc ngoặc vuông và cắt dấu phẩy cuối cùng
+    //        return "[" + str.Substring(0, str.Length - 2) + "]";
+    //    }
+    //    return "[]";
+    //}
 
 }
