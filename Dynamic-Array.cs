@@ -30,16 +30,48 @@ public class Dynamic_Array
 
     public void insert(int index, object data)
     {
-
+        if (size >= capacity)
+        {
+            grow();
+        }
+        for (int i = size; i > index; i--)
+        {
+            a[i] = a[i - 1];
+        }
+        a[index] = data;
+        size++;
     }
 
     public void delete(object data)
     {
-
+        for (int i = 0; i < size; i++)
+        {
+            if (a[i] == data)
+            {
+                for (int j = 0; j < (size - i - 1); j++)
+                {
+                    a[i + j] = a[i + j + 1];
+                }
+                a[size - 1] = null;
+                size--;
+                if (size <= (int)(capacity / 3))
+                {
+                    shrink();
+                }
+                break;
+            }
+        }
     }
 
     public int search(object data)
     {
+        for (int i = 0; i < size; i++)
+        {
+            if (a[i] == data)
+            {
+                return i;
+            }
+        }
         return -1;
     }
 
